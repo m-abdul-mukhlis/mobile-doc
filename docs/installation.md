@@ -43,7 +43,7 @@ Create new expo project:
 replace my-app with your app name.
 
 ```bash
-npx create-expo-app my-app --template expo-template-blank-typescript@sdk-48
+npx create-expo-app@latest --template blank-typescript
 ```
 ```bash
 cd my-app
@@ -51,80 +51,70 @@ cd my-app
 ```bash
 bun add esoftplay && bun install
 ```
+```bash
+reinstall
+```
 
 `./package.json` file will look like this when installation is success:
 
 ```jsx title="package.json"
 {
-  "name": "my-app",
+  "name": "myapp",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "expo/AppEntry.js",
   "scripts": {
-    "start": "esp start && npx expo start --dev-client",
+    "start": "esp start && bunx expo start --dev-client",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/vector-icons": "^13.0.0",
-    "@react-native-async-storage/async-storage": "^1.17.11",
-    "@react-native-community/netinfo": "^9.3.7",
-    "@react-native-masked-view/masked-view": "^0.2.8",
-    "@react-navigation/native": "^6.1.9",
-    "@react-navigation/native-stack": "^6.9.17",
-    "@react-navigation/stack": "^6.3.20",
-    "@shopify/flash-list": "1.4.0",
-    "buffer": "^6.0.3",
-    "dayjs": "^1.11.10",
-    "esoftplay": "^0.0.135-z",
-    "expo": "~48.0.21",
-    "expo-application": "~5.1.1",
-    "expo-camera": "~13.2.1",
-    "expo-clipboard": "~4.1.2",
-    "expo-constants": "~14.2.1",
-    "expo-dev-client": "~2.2.1",
-    "expo-document-picker": "~11.2.2",
-    "expo-file-system": "~15.2.2",
-    "expo-font": "~11.1.1",
-    "expo-image-manipulator": "~11.1.1",
-    "expo-image-picker": "~14.1.1",
-    "expo-linear-gradient": "~12.1.2",
-    "expo-media-library": "~15.2.3",
-    "expo-notifications": "~0.18.1",
-    "expo-secure-store": "~12.1.1",
-    "expo-splash-screen": "~0.18.2",
-    "expo-status-bar": "~1.4.4",
-    "expo-updates": "~0.16.4",
+    "@expo/vector-icons": "^14.0.3",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-community/netinfo": "11.3.1",
+    "@react-native-masked-view/masked-view": "0.3.1",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.11.0",
+    "@react-navigation/stack": "^6.4.1",
+    "@shopify/flash-list": "1.6.4",
+    "esoftplay": "^0.0.141-r",
+    "expo": "~51.0.28",
+    "expo-application": "~5.9.1",
+    "expo-camera": "~15.0.16",
+    "expo-clipboard": "~6.0.3",
+    "expo-dev-client": "~4.0.28",
+    "expo-document-picker": "~12.0.2",
+    "expo-image": "~1.13.0",
+    "expo-image-manipulator": "~12.0.5",
+    "expo-image-picker": "~15.0.7",
+    "expo-linear-gradient": "~13.0.2",
+    "expo-media-library": "~16.0.5",
+    "expo-notifications": "~0.28.19",
+    "expo-secure-store": "~13.0.2",
+    "expo-splash-screen": "~0.27.6",
+    "expo-sqlite": "~14.0.6",
+    "expo-status-bar": "~1.12.1",
+    "expo-updates": "~0.25.27",
     "immhelper": "^1.0.52",
     "react": "18.2.0",
-    "react-fast-compare": "^3.2.0",
-    "react-native": "0.71.8",
-    "react-native-awesome-gallery": "0.3.5",
-    "react-native-calendar-picker": "^7.1.2",
-    "react-native-chart-kit": "^6.11.0",
-    "react-native-fast-image": "^8.5.11",
-    "react-native-gesture-handler": "~2.9.0",
-    "react-native-maps": "1.3.2",
-    "react-native-mmkv": "^2.10.2",
-    "react-native-pan-pinch-view": "^1.0.1",
-    "react-native-pinch-zoom-view-movable": "^0.2.1",
-    "react-native-qrcode-svg": "^6.0.1",
-    "react-native-reanimated": "~2.14.4",
-    "react-native-render-html": "^6.3.4",
-    "react-native-safe-area-context": "4.5.0",
-    "react-native-screens": "~3.20.0",
-    "react-native-screenshot-prevent": "1.1.1",
-    "react-native-svg": "13.4.0",
-    "react-native-view-shot": "3.5.0",
-    "react-native-web": "~0.18.11",
-    "react-native-webview": "11.26.0",
+    "react-fast-compare": "^3.2.2",
+    "react-native": "0.74.5",
+    "react-native-awesome-gallery": "^0.4.3",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-keyboard-controller": "^1.14.2",
+    "react-native-mmkv": "^3.1.0",
+    "react-native-pan-pinch-view": "^2.0.0",
+    "react-native-reanimated": "~3.10.1",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "3.31.1",
+    "react-native-webview": "13.8.6",
     "shorthash": "^0.0.2",
     "usestable": "^0.1.25"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@types/react": "~18.0.14",
-    "typescript": "^4.9.4"
+    "@types/react": "~18.2.45",
+    "typescript": "^5.1.3"
   },
   "private": true,
   "trustedDependencies": [
@@ -180,7 +170,7 @@ bun start
 
 This is the first look page after successfully start the app.
 
-![firstlook](/img/firstlook.png)
+<!-- ![firstlook](/img/firstlook.png) -->
 
 :::tip Pro-Tip
 

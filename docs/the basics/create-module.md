@@ -41,4 +41,4 @@ The names of arguments (Args) and properties (Props) are created by combining th
 
 This is the result after adding new module `MainIndex`.
 
-![helo](/img/helo.png)
+<!-- ![helo](/img/helo.png) -->
